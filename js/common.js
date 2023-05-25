@@ -5,6 +5,8 @@ spaceBetween: 100,
 
 $(document).on('click', '#btn-search-open', openSearchPane);
 $(document).on('focusout', '#search-input', closeSearchPane);
+$(document).on('click', '#btn-menu', toggleMenuPane);
+$(document).on('click', 'body._menu-opened button.expand', toggleDepth2);
 
 function openSearchPane(){
     $('#search-wrap').addClass('_opened');
@@ -13,9 +15,17 @@ function openSearchPane(){
     }, 100);
 }
 
-function closeSearchPane(){
+function closeSearchPane(){ // have to submit input value before this function is triggered
     $('#search-wrap').removeClass('_opened');
     setTimeout(function(){
         $('#search-input').val('');
-    }, 100);    
+    }, 100);
+}
+
+function toggleMenuPane(){
+    $('body').toggleClass('_menu-opened');
+}
+
+function toggleDepth2(){
+    $(this).parent().toggleClass('_opened').siblings().removeClass('_opened');    
 }

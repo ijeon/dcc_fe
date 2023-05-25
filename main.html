@@ -11,7 +11,8 @@
         <script defer src="js/swiper-bundle.min.js"></script>
         <script defer src="js/common.js"></script>
     </head>
-    <body>
+    <body class="_menu-opened">
+        <div id="dim"></div>
         <header class="wrap">
             <div id="search-wrap">
                 <input id="search-input" type="text">
@@ -21,12 +22,19 @@
             <button id="logo" onclick="window.location.href='/'"></button>
             <nav id="gnb">
                 <button id="btn-lang">ENG</button>
-                <button id="btn-mypage"></button>
+                <button id="btn-account"></button>
                 <button id="btn-cart"><span id="item-count">10</span></button>
+                <button id="btn-menu"></button>
             </nav>
         </header>
         <div id="menubar">
             <nav id="lnb">
+                <div id="settings">                    
+                    <p>Hello, <em>Joey</em>!</p> <!-- nickname -->
+                    <button id="btn-lnb-lang">Change Language</button>
+                    <button>Account Management</button>
+                    <button>Your Orders</button>
+                </div>
                 <div class="depth1">
                     <button class="expand">Comics</button>
                     <div class="depth2">
@@ -51,6 +59,15 @@
                             <button>Signed Comics</button>
                             <button>Graded Comics</button>
                             <button>DCC Exclusive</button>
+                        </div>
+                        <div class="divider">
+                            <p>Dummy Title</p>
+                            <button>Dummy Item</button>
+                            <button>Dummy Item</button>
+                        </div>
+                        <div class="divider">
+                            <p>Dummy Title</p>
+                            <button>Dummy Item</button>
                         </div>
                     </div>
                 </div>
