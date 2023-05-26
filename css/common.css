@@ -52,12 +52,13 @@ a, p, span, h1, h2, h3, h4 { word-break:break-word; }
     --main-black: #231f20;
 }
 :root { font-size:16px; line-height:1; font-family:Pretendard, sans-serif; }
-body { position:relative; min-width:340px; background-color:var(--main-tan); font-size:1rem; color:var(--main-black); }
-.wrap { display:block; width:100%; max-width:80rem; margin:0 auto; }
+body { position:relative; min-width:340px; background-color:var(--main-black); font-size:1rem; color:var(--main-black); }
+.wrap { position: relative; display:block; width:100%; max-width:80rem; margin:0 auto; }
 
 #dim { position:fixed; top:0; left:0; width:100%; height:100%; z-index: 9; background-color:rgba(0,0,0,0.5); display:none; }
-header { position:relative; padding:2rem 1rem; font-size:0; z-index:10; }
-header #logo { display:block; width:6rem; height:5rem; background-image:url(https://diceandcomics.com/images/dcc_letters.png); background-size:100%; background-repeat:no-repeat; background-position:center; margin:0 auto; }
+header { position:relative; font-size:0; z-index:10; background-color:var(--main-tan); }
+header .wrap { padding:2rem 1rem; }
+header #logo { display:block; width:6rem; height:5rem; background-image:url(../img/dcc_letters.png); background-size:100%; background-repeat:no-repeat; background-position:center; margin:0 auto; }
 header #gnb,
 header button#btn-search-open { position:absolute; top:3.5rem; }
 header #gnb { right:1rem; }
@@ -100,13 +101,25 @@ header #gnb button#btn-cart #item-count { position: absolute; top:-0.25rem; righ
 #menubar #lnb .depth2 button { opacity:0.7; transition:0.1s all ease-in-out; }
 #menubar #lnb .depth2 .divider { width:100%; }
 
+main { background-color:var(--main-tan); }
+
+footer { color:#fff; }
+footer .wrap { padding:1.5rem 1rem 1.5rem 5.5rem; }
+footer h1 { font-weight:600; }
+footer #shop-info { display:block; font-size:0; }
+footer #shop-info li { display:inline-block; font-size:0.9rem; margin-right:0.5rem; margin-top:0.8rem; opacity:0.7; }
+footer #shop-info li button { font-weight:600; }
+footer #shop-info li em { font-weight: 600; }
+footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: absolute; top:1rem; left:1rem; }
+
 section { display:block; }
-section.case1 { padding:3rem 1rem; }
+section.case1 .wrap { padding:3rem 1rem; }
 section h1 { text-align: center; font-size:2rem; margin-bottom:2rem; }
 .swiper { width:100%; height:20rem; background-color:#fff; }
 
 @media (max-width:899px) {
-	header { position:sticky; top:0; left:0; padding:1rem; background-color:var(--main-tan); box-shadow:0 0 5px rgba(0,0,0,0.4); }
+	header { position:sticky; top:0; left:0; background-color:var(--main-tan); box-shadow:0 0 5px rgba(0,0,0,0.4); }
+	header .wrap { padding:1rem; }
     header #logo { width:3rem; height:2.5rem; }
 	header #gnb button { margin-left:0.75rem; }
 	header #gnb,
@@ -119,7 +132,6 @@ section h1 { text-align: center; font-size:2rem; margin-bottom:2rem; }
 	header #search-wrap { width:calc(100% - 7.5rem); top:0.6rem; }
 	header #search-wrap #search-input { width:calc(100% - 3rem); }
 	body._menu-opened { overflow-y:hidden; }
-	body._menu-opened #dim { display: block; }
 	body._menu-opened header #gnb button#btn-menu { background-image:url(../img/icon-close.svg); }
 	#menubar { position:fixed; top:4.5rem; bottom:0; display:none; overflow-y:scroll; }
 	body._menu-opened #menubar { display:block; }
@@ -134,6 +146,8 @@ section h1 { text-align: center; font-size:2rem; margin-bottom:2rem; }
 	#menubar #lnb .depth2 button { padding:0.75rem 0.5rem; }
 	#menubar #lnb .depth1._opened > button.expand { background-image:url(../img/icon-shrink.svg); }
 	#menubar #settings { display:block; }
+	footer .wrap { padding:1.5rem 1rem; }
+	footer #logo-box { display:none; }
 }
 
 @media (min-width:900px) {

@@ -24,6 +24,9 @@ function closeSearchPane(){ // have to submit input value before this function i
 
 function toggleMenuPane(){
     $('body').toggleClass('_menu-opened');
+    if ($('body').hasClass('_menu-opened')){
+        $('#lnb').find('.depth1').removeClass('_opened').eq(0).addClass('_opened');
+    }
 }
 
 function toggleDepth2(){
