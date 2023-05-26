@@ -54,6 +54,15 @@ a, p, span, h1, h2, h3, h4 { word-break:break-word; }
 :root { font-size:16px; line-height:1; font-family:Pretendard, sans-serif; }
 body { position:relative; min-width:340px; background-color:var(--main-black); font-size:1rem; color:var(--main-black); }
 .wrap { position: relative; display:block; width:100%; max-width:80rem; margin:0 auto; }
+.custom-checkbox { display:inline-block; cursor:pointer; position: relative; -webkit-user-select: none; user-select: none; width:2rem; height:2rem; }
+.custom-checkbox input { position: absolute; width:0; height:0; opacity: 0; cursor: pointer; }
+.custom-checkbox .custom-checkbox-mark { position:absolute; top:0; left:0; width:2rem; height:2rem; border:1px solid var(--main-gray) }
+.custom-checkbox .custom-checkbox-mark:after { content: ''; position: absolute; display: none; top:0.15rem; left:0.5rem; width:0.8rem; height:1.2rem; border:solid #fff; border-width:0 3px 3px 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.custom-checkbox input:checked ~ .custom-checkbox-mark { background-color:var(--main-gray); }
+.custom-checkbox input:checked ~ .custom-checkbox-mark:after { display: block; }
+.custom-checkbox._all .custom-checkbox-mark:before { content:'Select All Items'; position: absolute; top:0; left:2.5rem; white-space: nowrap; display:block; line-height: 2rem; }
+.custom-checkbox._all input:checked ~ .custom-checkbox-mark:before { content:'Deselect All Items' }
+.table-wrap { display: table; width:100%; }
 
 #dim { position:fixed; top:0; left:0; width:100%; height:100%; z-index: 9; background-color:rgba(0,0,0,0.5); display:none; }
 header { position:relative; font-size:0; z-index:10; background-color:var(--main-tan); }
@@ -101,21 +110,39 @@ header #gnb button#btn-cart #item-count { position: absolute; top:-0.25rem; righ
 #menubar #lnb .depth2 button { opacity:0.7; transition:0.1s all ease-in-out; }
 #menubar #lnb .depth2 .divider { width:100%; }
 
-main { background-color:var(--main-tan); }
+main { min-height:calc(100vh - 20rem); background-color:var(--main-tan); }
+main section { display:block; }
+main section.case1 .wrap { padding:3rem 1rem; }
+main section h1 { font-weight:600; text-align: center; font-size:1.5rem; margin-bottom:2rem; }
+main section #cart-control { margin-bottom:1rem; }
+main section #cart {  }
+main section #cart li { display: flex; margin-bottom:0.5rem; }
+main section #cart li .item-select { flex-basis:2.5rem; padding:2.5rem 0.5rem 0 0; }
+main section #cart li .item-info { position: relative; text-align: left; width:100%; height:7rem; padding:1rem 1rem 1rem 7rem; background-color: #fff; display:table-cell; vertical-align: middle; font-size:0; }
+main section #cart li .item-info .img-preview { position: absolute; top:1rem; left:1rem; width:5rem; height:5rem; background-color:#eee; }
+main section #cart li .item-info .img-preview img { display:block; max-width:100%; max-height:100%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); }
+main section #cart li .item-info .title { width:100%; font-weight: 600; line-height: 1.5rem; display: -webkit-box; max-height: 3rem; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size:1rem; }
+main section #cart li .item-info .title em { color:var(--main-red); margin-right:0.5rem; }
+main section #cart li .item-info .item-price,
+main section #cart li .item-info .span-btn-delete { display: inline-block; vertical-align: middle; margin-top:0.7rem; font-size:1rem; }
+main section #cart li .item-info .span-btn-delete { padding-left:1rem; width:auto; height:1rem; background-image: url(../img/icon-delete.svg); background-position: left; background-repeat: no-repeat; background-size: 1rem; margin-left:0.5rem; opacity: 0.7; }
+main section #cart li .item-control { flex-basis:2.5rem; padding:0 0 0 0.5rem; }
+main section #cart li .item-control .item-quantity { display:inline-block; }
+main section #cart li .item-control .item-quantity .quantity-input { height:3rem; width:3rem; background-color: #fff; text-align: center; }
+main section #cart li .item-control .item-quantity button { display:block; width:3rem; height:2rem; background-color:var(--main-gray); background-position:center; background-repeat: no-repeat; background-size:75%; }
+main section #cart li .item-control .item-quantity button.btn-quantity-add { background-image: url(../img/icon-shrink.svg); }
+main section #cart li .item-control .item-quantity button.btn-quantity-sub { background-image: url(../img/icon-expand.svg); }
+
+main .swiper { width:100%; height:20rem; background-color:#fff; }
 
 footer { color:#fff; }
 footer .wrap { padding:1.5rem 1rem 1.5rem 5.5rem; }
-footer h1 { font-weight:600; }
+footer h1 { font-weight:600; margin-bottom:0.7rem; }
 footer #shop-info { display:block; font-size:0; }
-footer #shop-info li { display:inline-block; font-size:0.9rem; margin-right:0.5rem; margin-top:0.8rem; opacity:0.7; }
+footer #shop-info li { display:inline-block; font-size:0.9rem; margin-right:0.5rem; line-height:1.5; opacity:0.7; }
 footer #shop-info li button { font-weight:600; }
 footer #shop-info li em { font-weight: 600; }
 footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: absolute; top:1rem; left:1rem; }
-
-section { display:block; }
-section.case1 .wrap { padding:3rem 1rem; }
-section h1 { text-align: center; font-size:2rem; margin-bottom:2rem; }
-.swiper { width:100%; height:20rem; background-color:#fff; }
 
 @media (max-width:899px) {
 	header { position:sticky; top:0; left:0; background-color:var(--main-tan); box-shadow:0 0 5px rgba(0,0,0,0.4); }
