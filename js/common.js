@@ -11,7 +11,8 @@ $(document)
     .on('change', '#cart-select-all', toggleSelectAll)
     .on('change', '#cart li .custom-checkbox input', checkSelectAll)
     .on('click', '.item-quantity button', changeQuantity)
-    .on('click', '.span-btn-delete', removeItem);
+    .on('click', '.span-btn-delete', removeItem)
+    .on('click', '#btn-cart-remove-selected', removeSelectedItems);
 
 function openSearchPane(){
     $('#search-wrap').addClass('_opened');
@@ -65,4 +66,13 @@ function removeItem(idx){
 
     if (window.confirm('Do you want to remove this item?'))
             $('#cart').find('li').eq(index).remove();
+}
+
+function removeSelectedItems(){
+    if (window.confirm('Do you want to remove selected items?')){
+        $('#cart li').each(function(){
+            if ($(this).find('.item-select input').is(':checked'))
+                $(this).remove();
+        });
+    }    
 }
