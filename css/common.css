@@ -117,24 +117,24 @@ main section h1 { font-weight:600; text-align: center; font-size:1.5rem; margin-
 main#cart-content .wrap { font-size:0; }
 main section #cart-control { margin-bottom:1rem; }
 main section #cart-control #btn-cart-remove-selected,
-main section #cart li .item-info .span-btn-delete { padding-left:1rem; width:auto; height:1rem; background-image: url(../img/icon-delete.svg); background-position: left; background-repeat: no-repeat; background-size: 1rem; margin-left:0.5rem; opacity: 0.7; }
+main section .cart li .item-info .span-btn-delete { padding-left:1rem; width:auto; height:1rem; background-image: url(../img/icon-delete.svg); background-position: left; background-repeat: no-repeat; background-size: 1rem; margin-left:0.5rem; opacity: 0.7; }
 main section #cart-control #btn-cart-remove-selected { position: absolute; top:0rem; right:0; height: 2rem; }
-main section #cart .table-wrap { height:7rem; }
-main section #cart li { display: flex; margin-bottom:0.5rem; }
-main section #cart li .item-select { flex-basis:2.5rem; padding:2.5rem 0.5rem 0 0; }
-main section #cart li .item-info { position: relative; text-align: left; width:100%; height:7rem; padding:1rem 1rem 1rem 7rem; background-color: #fff; display:table-cell; vertical-align: middle; font-size:0; }
-main section #cart li .item-info .img-preview { position: absolute; top:1rem; left:1rem; width:5rem; height:5rem; background-color:#eee; }
-main section #cart li .item-info .img-preview img { display:block; max-width:100%; max-height:100%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); }
-main section #cart li .item-info .title { width:100%; font-weight: 600; line-height: 1.5rem; display: -webkit-box; max-height: 3rem; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size:1rem; }
-main section #cart li .item-info .title em { color:var(--main-red); margin-right:0.5rem; }
-main section #cart li .item-info .item-price,
-main section #cart li .item-info .span-btn-delete { display: inline-block; vertical-align: middle; margin-top:0.7rem; font-size:1rem; }
-main section #cart li .item-control { flex-basis:2.5rem; padding:0 0 0 0.5rem; }
-main section #cart li .item-control .item-quantity { display:inline-block; }
-main section #cart li .item-control .item-quantity .quantity-input { height:3rem; width:3rem; background-color: #fff; text-align: center; }
-main section #cart li .item-control .item-quantity button { display:block; width:3rem; height:2rem; background-color:var(--main-gray); background-position:center; background-repeat: no-repeat; background-size:75%; }
-main section #cart li .item-control .item-quantity button.btn-quantity-add { background-image: url(../img/icon-shrink.svg); }
-main section #cart li .item-control .item-quantity button.btn-quantity-sub { background-image: url(../img/icon-expand.svg); }
+main section .cart .table-wrap { height:7rem; }
+main section .cart li { display: flex; margin-bottom:0.5rem; }
+main section .cart li .item-select { flex-basis:2.5rem; padding:2.5rem 0.5rem 0 0; }
+main section .cart li .item-info { position: relative; text-align: left; width:100%; height:7rem; padding:1rem 1rem 1rem 7rem; background-color: #fff; display:table-cell; vertical-align: middle; font-size:0; }
+main section .cart li .item-info .img-preview { position: absolute; top:1rem; left:1rem; width:5rem; height:5rem; background-color:#eee; }
+main section .cart li .item-info .img-preview img { display:block; max-width:100%; max-height:100%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); }
+main section .cart li .item-info .title { width:100%; font-weight: 600; line-height: 1.5rem; display: -webkit-box; max-height: 3rem; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size:1rem; }
+main section .cart li .item-info .title em { color:var(--main-red); margin-right:0.5rem; }
+main section .cart li .item-info .item-price,
+main section .cart li .item-info .span-btn-delete { display: inline-block; vertical-align: middle; margin-top:0.7rem; font-size:1rem; }
+main section .cart li .item-control { flex-basis:2.5rem; padding:0 0 0 0.5rem; }
+main section .cart li .item-control .item-quantity { display:inline-block; }
+main section .cart li .item-control .item-quantity .quantity-input { height:3rem; width:3rem; background-color: #fff; text-align: center; }
+main section .cart li .item-control .item-quantity button { display:block; width:3rem; height:2rem; background-color:var(--main-gray); background-position:center; background-repeat: no-repeat; background-size:75%; }
+main section .cart li .item-control .item-quantity button.btn-quantity-add { background-image: url(../img/icon-shrink.svg); }
+main section .cart li .item-control .item-quantity button.btn-quantity-sub { background-image: url(../img/icon-expand.svg); }
 main section #cart-wrap { display: table; width:100%; }
 main section #cart-wrap > div { position:relative; display:table-cell; vertical-align:top; font-size:1rem; }
 main section #cart-list { width:calc(100% - 20rem); }
@@ -192,23 +192,25 @@ footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: ab
 	#menubar #settings { display:block; }
 	footer .wrap { padding:1.5rem 1rem; }
 	footer #logo-box { display:none; }
-	main section #cart li .item-info { padding:0.5rem 0.5rem 0.5rem 5rem; height:5rem; }
-	main section #cart li .item-info .title,
-	main section #cart li .item-info .item-price,	
-	main section #cart li .item-info .span-btn-delete,
-	main section #cart li .item-control .item-quantity .quantity-input,
+	main section.case1 .wrap { padding:2rem 1rem; }
+	main section .cart li .item-info { padding:0.5rem 0.5rem 0.5rem 5rem; height:5rem; }
+	main section .cart li .item-info .title,
+	main section .cart li .item-info .item-price,	
+	main section .cart li .item-info .span-btn-delete,
+	main section .cart li .item-control .item-quantity .quantity-input,
 	main section #cart-control #btn-cart-remove-selected { font-size:0.8rem; }
-	main section #cart li .item-select { flex-basis: 2rem; padding: 1.75rem 0.5rem 0 0; }
-	main section #cart li .item-info .img-preview { width:4rem; height:4rem; top:0.5rem; left:0.5rem; }
-	main section #cart li .item-info .title { max-height:2rem; line-height: 1rem; }
-	main section #cart li .item-info .item-price,
-	main section #cart li .item-info .span-btn-delete { margin-top:0.5rem; }
-	main section #cart li .item-control { flex-basis:2rem; }
-	main section #cart li .item-control .item-quantity button { width:2rem; height:1.5rem; }
-	main section #cart li .item-control .item-quantity .quantity-input { width:2rem; height:2rem }
-	main section #cart .table-wrap { height:5rem; }
-	main section #cart-wrap > div { display:block; width:100% !important; padding-bottom:1rem; }	
+	main section .cart li .item-select { flex-basis: 2rem; padding: 1.75rem 0.5rem 0 0; }
+	main section .cart li .item-info .img-preview { width:4rem; height:4rem; top:0.5rem; left:0.5rem; }
+	main section .cart li .item-info .title { max-height:2rem; line-height: 1rem; }
+	main section .cart li .item-info .item-price,
+	main section .cart li .item-info .span-btn-delete { margin-top:0.5rem; }
+	main section .cart li .item-control { flex-basis:2rem; }
+	main section .cart li .item-control .item-quantity button { width:2rem; height:1.5rem; }
+	main section .cart li .item-control .item-quantity .quantity-input { width:2rem; height:2rem }
+	main section .cart .table-wrap { height:5rem; }
+	main section #cart-wrap > div { display:block; width:100% !important; }	
 	main section #cart-wrap { display: block; }
+	main section #cart-list { padding-bottom:1rem; }
 	main section #cart-order #cart-order-wrap { position:relative; top:0; }
 	main section #cart-control #btn-cart-remove-selected { height:1.5rem; }
 }
@@ -221,7 +223,7 @@ footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: ab
 	#menubar #lnb .depth2 button:hover { background-color:var(--main-gray); transition:0.1s all ease-in-out; opacity:1; }
 	#menubar #lnb .depth2 .divider { width:100%; }
 	main section #cart-order #cart-order-wrap #btn-cart-checkout,
-	main section #cart li .item-control .item-quantity button { transition:0.1s all ease-in-out; }
+	main section .cart li .item-control .item-quantity button { transition:0.1s all ease-in-out; }
 	main section #cart-order #cart-order-wrap #btn-cart-checkout:hover,
-	main section #cart li .item-control .item-quantity button:hover { background-color: var(--main-gray-hover); }
+	main section .cart li .item-control .item-quantity button:hover { background-color: var(--main-gray-hover); }
 }

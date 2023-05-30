@@ -9,7 +9,7 @@ $(document)
     .on('click', '#btn-menu', toggleMenuPane)
     .on('click', 'body._menu-opened button.expand', toggleDepth2)
     .on('change', '#cart-select-all', toggleSelectAll)
-    .on('change', '#cart li .custom-checkbox input', checkSelectAll)
+    .on('change', '.cart li .custom-checkbox input', checkSelectAll)
     .on('click', '.item-quantity button', changeQuantity)
     .on('click', '.span-btn-delete', removeItem)
     .on('click', '#btn-cart-remove-selected', removeSelectedItems);
@@ -40,9 +40,9 @@ function toggleDepth2(){
 
 function toggleSelectAll(){
     if ($(this).is(':checked'))
-        $('#cart li .custom-checkbox input').prop('checked', true);        
+        $('.cart li .custom-checkbox input').prop('checked', true);        
     else
-        $('#cart li .custom-checkbox input').prop('checked', false);
+        $('.cart li .custom-checkbox input').prop('checked', false);
 }
 
 function checkSelectAll(){
@@ -70,7 +70,7 @@ function removeItem(idx){
 
 function removeSelectedItems(){
     if (window.confirm('Do you want to remove selected items?')){
-        $('#cart li').each(function(){
+        $('.cart li').each(function(){
             if ($(this).find('.item-select input').is(':checked'))
                 $(this).remove();
         });
