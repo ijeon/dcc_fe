@@ -40,7 +40,6 @@
                     <button class="expand">Account Management</button>
                     <div class="depth2">
                         <div class="divider">
-                            <button>Shopping Cart</button>
                             <button>Order History</button>
                             <button>Manage Address</button>
                             <button>Account Info</button>
@@ -140,203 +139,98 @@
         <main id="checkout-content">
             <section class="case1">
                 <div class="wrap">
-                    <h1>Checkout</h1>
+                    <h1>Checkout<button id="btn-back-cart"><span class="icon"></span><span>Back to shopping cart</span></button></h1>
+                    <div class="page-msg">
+                        <p class="info">Some important message.</p>
+                    </div>
+                    <h2>Order Summary</h2>
+                    <table id="summary">
+                        <caption>
+                            <button id="btn-bnb">Add bags &amp; boards</button>
+                            <button id="btn-bnb-help"></button>
+                        </caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Bag & Board</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bnb-added item-preorder">
+                                <td class="item-info">
+                                    <div class="img-preview">
+                                        <img src="img/sample/0123DC053.jpg">
+                                    </div>
+                                    <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
+                                </td>
+                                <td>111</td>
+                                <td>119,400 KRW<em class="bnb">+200 KRW</em></td>
+                                <td class="bnb">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="custom-checkbox-mark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item-info">
+                                    <div class="img-preview">
+                                        <img src="img/sample/0123DC053.jpg">
+                                    </div>
+                                    <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
+                                </td>
+                                <td>111</td>
+                                <td>119,400 KRW<em class="bnb">+200 KRW</em></td>
+                                <td class="bnb">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox-mark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item-info">
+                                    <div class="img-preview">
+                                        <img src="img/sample/0123DC053.jpg">
+                                    </div>
+                                    <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
+                                </td>
+                                <td>111</td>
+                                <td>119,400 KRW<em class="bnb">+200 KRW</em></td>
+                                <td class="bnb">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="custom-checkbox-mark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item-info">
+                                    <div class="img-preview">
+                                        <img src="img/sample/0123DC053.jpg">
+                                    </div>
+                                    <a href="javascript:;" class="title">Not a book</a>
+                                </td>
+                                <td>111</td>
+                                <td>119,400 KRW</td>
+                                <td class="bnb">
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     <h2>Shipping Address</h2>
-                    <div id="cart-wrap">
-                        <div id="cart-list">
-                            <div id="cart-control">
-                                <label class="custom-checkbox _all">
-                                    <input type="checkbox" id="cart-select-all">
-                                    <span class="custom-checkbox-mark"></span>
-                                </label>
-                                <button id="btn-cart-remove-selected">Remove</button>
-                            </div>
-                            <ul class="cart">
-                                <li>
-                                    <div class="item-select">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox" checked>
-                                            <span class="custom-checkbox-mark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="item-info">
-                                            <div class="img-preview">
-                                                <img src="img/sample/0123DC053.jpg">
-                                            </div>
-                                            <a href="javascript:;" class="title"><em>Pre-order</em>Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
-                                            <span class="item-price">9,400 KRW</span>
-                                            <button class="span-btn-delete">Remove</button>
-                                        </div>
-                                    </div>                            
-                                    <div class="item-control">
-                                        <div class="item-quantity">
-                                            <button class="btn-quantity-add"></button>
-                                            <input class="quantity-input" type="number" value="1">
-                                            <button class="btn-quantity-sub"></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-select">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox" checked>
-                                            <span class="custom-checkbox-mark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="item-info">
-                                            <div class="img-preview">
-                                                <img src="img/sample/0123DC053.jpg">
-                                            </div>
-                                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
-                                            <span class="item-price">9,400 KRW</span>
-                                            <button class="span-btn-delete">Remove</button>
-                                        </div>
-                                    </div>                            
-                                    <div class="item-control">
-                                        <div class="item-quantity">
-                                            <button class="btn-quantity-add"></button>
-                                            <input class="quantity-input" type="number" value="1">
-                                            <button class="btn-quantity-sub"></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-select">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox">
-                                            <span class="custom-checkbox-mark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="item-info">
-                                            <div class="img-preview">
-                                                <img src="img/sample/0123DC053.jpg">
-                                            </div>
-                                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
-                                            <span class="item-price">9,400 KRW</span>
-                                            <button class="span-btn-delete">Remove</button>
-                                        </div>
-                                    </div>                            
-                                    <div class="item-control">
-                                        <div class="item-quantity">
-                                            <button class="btn-quantity-add"></button>
-                                            <input class="quantity-input" type="number" value="3">
-                                            <button class="btn-quantity-sub"></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-select">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox">
-                                            <span class="custom-checkbox-mark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="item-info">
-                                            <div class="img-preview">
-                                                <img src="img/sample/0123DC053.jpg">
-                                            </div>
-                                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
-                                            <span class="item-price">9,400 KRW</span>
-                                            <button class="span-btn-delete">Remove</button>
-                                        </div>
-                                    </div>                            
-                                    <div class="item-control">
-                                        <div class="item-quantity">
-                                            <button class="btn-quantity-add"></button>
-                                            <input class="quantity-input" type="number" value="3">
-                                            <button class="btn-quantity-sub"></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-select">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox">
-                                            <span class="custom-checkbox-mark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="item-info">
-                                            <div class="img-preview">
-                                                <img src="img/sample/0123DC053.jpg">
-                                            </div>
-                                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
-                                            <span class="item-price">9,400 KRW</span>
-                                            <button class="span-btn-delete">Remove</button>
-                                        </div>
-                                    </div>                            
-                                    <div class="item-control">
-                                        <div class="item-quantity">
-                                            <button class="btn-quantity-add"></button>
-                                            <input class="quantity-input" type="number" value="3">
-                                            <button class="btn-quantity-sub"></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-select">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox">
-                                            <span class="custom-checkbox-mark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="item-info">
-                                            <div class="img-preview">
-                                                <img src="img/sample/0123DC053.jpg">
-                                            </div>
-                                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
-                                            <span class="item-price">9,400 KRW</span>
-                                            <button class="span-btn-delete">Remove</button>
-                                        </div>
-                                    </div>                            
-                                    <div class="item-control">
-                                        <div class="item-quantity">
-                                            <button class="btn-quantity-add"></button>
-                                            <input class="quantity-input" type="number" value="3">
-                                            <button class="btn-quantity-sub"></button>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-select">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox">
-                                            <span class="custom-checkbox-mark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="table-wrap">
-                                        <div class="item-info">
-                                            <div class="img-preview">
-                                                <img src="img/sample/0123DC053.jpg">
-                                            </div>
-                                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
-                                            <span class="item-price">9,400 KRW</span>
-                                            <button class="span-btn-delete">Remove</button>
-                                        </div>
-                                    </div>                            
-                                    <div class="item-control">
-                                        <div class="item-quantity">
-                                            <button class="btn-quantity-add"></button>
-                                            <input class="quantity-input" type="number" value="3">
-                                            <button class="btn-quantity-sub"></button>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="cart-order">
-                            <div id="cart-order-wrap">
-                                <p>Order Total (10 Items)</p>
-                                <em id="cart-order-total">94,000 KRW</em>
-                                <p>Shipping will be calculated at checkout.</p>
-                                <button id="btn-cart-checkout">Checkout</button>
-                            </div>
-                        </div>
+                    <div id="checkout-address">
+                        <input type="radio">
                     </div>
                 </div>
             </section>            

@@ -40,7 +40,6 @@
                     <button class="expand">Account Management</button>
                     <div class="depth2">
                         <div class="divider">
-                            <button>Shopping Cart</button>
                             <button>Order History</button>
                             <button>Manage Address</button>
                             <button>Account Info</button>
@@ -141,6 +140,9 @@
             <section class="case1">
                 <div class="wrap">
                     <h1>Shopping Cart</h1>
+                    <div class="page-msg">
+                        <p class="info">You can add bags &amp; boards / apply promo code and <b>Hero Points</b> at checkout.</p>
+                    </div>
                     <div id="cart-wrap">
                         <div id="cart-list">
                             <div id="cart-control">
@@ -149,9 +151,19 @@
                                     <span class="custom-checkbox-mark"></span>
                                 </label>
                                 <button id="btn-cart-remove-selected">Remove</button>
+                                <div id="select-cart">
+                                    <label class="span-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Pre-order</span>
+                                    </label>
+                                    <label class="span-checkbox">
+                                        <input type="checkbox">
+                                        <span>In-store</span>
+                                    </label>
+                                </div>
                             </div>
                             <ul class="cart">
-                                <li>
+                                <li class="item-preorder">
                                     <div class="item-select">
                                         <label class="custom-checkbox">
                                             <input type="checkbox" checked>
@@ -163,7 +175,7 @@
                                             <div class="img-preview">
                                                 <img src="img/sample/0123DC053.jpg">
                                             </div>
-                                            <a href="javascript:;" class="title"><em>Pre-order</em>Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
+                                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
                                             <span class="item-price">9,400 KRW</span>
                                             <button class="span-btn-delete">Remove</button>
                                         </div>
@@ -176,10 +188,10 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="item-preorder">
                                     <div class="item-select">
                                         <label class="custom-checkbox">
-                                            <input type="checkbox" checked>
+                                            <input type="checkbox">
                                             <span class="custom-checkbox-mark"></span>
                                         </label>
                                     </div>
@@ -332,7 +344,7 @@
                             <div id="cart-order-wrap">
                                 <p>Order Total (10 Items)</p>
                                 <em id="cart-order-total">94,000 KRW</em>
-                                <p>Shipping will be calculated at checkout.</p>
+                                <p>Shipping will be calculated at checkout</p>
                                 <button id="btn-cart-checkout">Checkout</button>
                             </div>
                         </div>

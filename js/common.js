@@ -12,7 +12,9 @@ $(document)
     .on('change', '.cart li .custom-checkbox input', checkSelectAll)
     .on('click', '.item-quantity button', changeQuantity)
     .on('click', '.span-btn-delete', removeItem)
-    .on('click', '#btn-cart-remove-selected', removeSelectedItems);
+    .on('click', '#btn-cart-remove-selected', removeSelectedItems)    
+    .on('click', '#btn-bnb', addBnb)
+    .on('change', 'td.bnb input', addBnbMsg);
 
 function openSearchPane(){
     $('#search-wrap').addClass('_opened');
@@ -75,4 +77,19 @@ function removeSelectedItems(){
                 $(this).remove();
         });
     }    
+}
+
+function addBnb(){
+    $('#summary td.bnb').each(function(){
+        $(this).find('input').prop('checked', true);
+        $(this).parent().addClass('bnb-added');
+    });
+}
+
+function addBnbMsg(){    
+    if ($(this).prop('checked') == true){
+        $(this).parents('tr').addClass('bnb-added');
+    } else {
+        $(this).parents('tr').removeClass('bnb-added');
+    }
 }
