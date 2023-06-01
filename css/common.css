@@ -271,7 +271,7 @@ footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: ab
 	main section #summary td:first-child { display:block; }
 	main section #summary td:nth-child(2),
 	main section #summary td:nth-child(3) { display:inline-block; padding-top:0; }
-	main section #summary td:nth-child(2)::before { content:'Quantity: '; font-weight: 600; }
+	main section #summary td:nth-child(2)::before { content:'Qty: '; font-weight: 600; }
 	main section #summary td:nth-child(3)::before { content:'Price: '; font-weight: 600; }
 	main section #summary th,
 	main section #summary td { line-height:1rem; }
