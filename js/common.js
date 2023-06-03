@@ -3,6 +3,23 @@ speed: 400,
 spaceBetween: 100,
 });
 
+$(window).on('load', init);
+
+function init(){
+    $('.img-preview').each(function(){
+        $(this).imgBlur(); // You can callback this function later each time images are loaded.
+    });
+}
+
+$.fn.imgBlur = function(){
+    var src = this.find('img').attr('src');
+    
+    this.find('.preview-bg').css({
+        backgroundImage: 'url('+src+')'
+    });
+    console.log(src);
+};
+
 $(document)
     .on('click', '#btn-search-open', openSearchPane)
     .on('focusout', '#search-input', closeSearchPane)
@@ -86,10 +103,9 @@ function addBnb(){
     });
 }
 
-function addBnbMsg(){    
-    if ($(this).prop('checked') == true){
+function addBnbMsg(){
+    if ($(this).prop('checked') == true)
         $(this).parents('tr').addClass('bnb-added');
-    } else {
+    else
         $(this).parents('tr').removeClass('bnb-added');
-    }
 }
