@@ -1,6 +1,29 @@
-const swiper = new Swiper('.swiper', {
-speed: 400,
-spaceBetween: 100,
+var swiper = new Swiper("#slider-main-foc", {
+    slidesPerView: 2,
+    spaceBetween: 16,
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+        },
+    },
 });
 
 $(window).on('load', init);

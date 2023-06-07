@@ -117,7 +117,8 @@ header #gnb button#btn-cart #item-count { position: absolute; top:-0.25rem; righ
 
 main { min-height:calc(100vh - 20rem); background-color:var(--main-tan); }
 main section { display:block; }
-main section.case1 .wrap { padding:3rem 1rem; }
+main section.case1 .wrap { padding:3rem 1rem 1rem; }
+main section.case1:last-of-type .wrap { padding:3rem 1rem; }
 main section h1 { font-weight:600; text-align: center; font-size:1.5rem; margin-bottom:2rem; position: relative; }
 main#cart-content .wrap { font-size:0; }
 main section #cart-control { margin-bottom:1rem; position: relative; height:2rem; }
@@ -226,8 +227,15 @@ main section #details-wrap #details-info #details-order #details-quantity { disp
 main section #details-wrap #details-info #details-order #details-quantity button { width:3rem; }
 main section #details-wrap #details-info #details-order #details-quantity input { background-color: #fff; font-size:1rem; width:4rem; text-align: center; }
 
+main#main-content section .list { display:flex; grid-gap:0; }
+main#main-content section .list .img-preview,
+main#main-content section .list p { user-select: none; }
 
-main .swiper { width:100%; height:20rem; background-color:#fff; }
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next { color:var(--main-gray-hover); }
+.swiper.scrollable { padding-bottom:0.7rem; }
+.swiper.scrollable .swiper-scrollbar { bottom:0; width:100%; left:0; }
+.swiper.scrollable .swiper-scrollbar .swiper-scrollbar-drag { background: var(--main-gray-light); }
 
 footer { color:#fff; }
 footer .wrap { padding:1.5rem 1rem 1.5rem 5.5rem; }
@@ -341,6 +349,8 @@ footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: ab
 	main section #details-wrap #details-info #details-price { font-size:1.4rem; margin-top:1rem; }
 	main section #details-wrap #details-info #details-order button#btn-add-item { width:calc(100% - 10.5rem); }
 	main section #details-wrap #details-info #details-order button#btn-return-list { display: block; margin:0; margin-top:1rem; width:100%; }
+	.swiper .swiper-button-prev,
+	.swiper .swiper-button-next { display: none; }
 }
 
 @media (max-width:639px) {
