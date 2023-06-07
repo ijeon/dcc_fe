@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dice and Comics Cafe">
+        <title>Dice and Comics Cafe</title>
+        <link rel="stylesheet" href="css/swiper-bundle.css">
+        <link rel="stylesheet" href="css/common.css">       
+        <script defer src="js/jquery-3.7.0.min.js"></script>
+        <script defer src="js/swiper-bundle.min.js"></script>
+        <script defer src="js/common.js"></script>
+    </head>
+    <body>
+        <div id="dim"></div>
+        <header>
+            <div class="wrap">
+                <div id="search-wrap">
+                    <input id="search-input" type="text">
+                    <button id="btn-search"></button>
+                </div>
+                <button id="btn-search-open">Search Dice and Comics Cafe</button>
+                <button id="logo" onclick="window.location.href='main.html'"></button>
+                <!-- <button id="logo" onclick="window.location.href='/'"></button> -->
+                <nav id="gnb">
+                    <button id="btn-lang">ENG</button>
+                    <button id="btn-account"></button>
+                    <button id="btn-cart" onclick="window.location.href='cart.html'"><span id="item-count">10</span></button>
+                    <!-- <button id="btn-cart"><span id="item-count">10</span></button> -->
+                    <button id="btn-menu"></button>
+                </nav>
+            </div>            
+        </header>
+        <div id="menubar">
+            <nav id="lnb">
+                <div id="settings" class="mobile-only">
+                    <h1>Hello, <em>Joey</em>!</h1> <!-- nickname -->
+                    <p>Hero Points: <em>10,000</em></p>
+                    <button id="btn-lnb-lang">ENG</button>
+                </div>
+                <div class="depth1 mobile-only _opened">
+                    <button class="expand">Account Management</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <button>Shopping Cart</button>
+                            <button>Order History</button>
+                            <button>Manage Address</button>
+                            <button>Account Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Comics</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <p>Pre-order</p>
+                            <button onclick="window.location.href='listing.html'">This Week's FOC</button>
+                            <!-- <button>This Week's FOC</button> -->
+                            <button>March Catalog</button>
+                            <button>April Catalog</button>
+                            <button>May Catalog</button>
+                            <button>June Catalog</button>
+                        </div>
+                        <div class="divider">
+                            <p>Inventory</p>
+                            <button>Show All</button>
+                            <button>DC</button>
+                            <button>Marvel</button>
+                            <button>Etc.</button>
+                        </div>
+                        <div class="divider">
+                            <p>Special</p>
+                            <button>Incentive Variants</button>
+                            <button>Signed Comics</button>
+                            <button>Graded Comics</button>
+                            <button>DCC Exclusive</button>
+                        </div>
+                        <div class="divider">
+                            <p>Dummy Title</p>
+                            <button>Dummy Item</button>
+                            <button>Dummy Item</button>
+                        </div>
+                        <div class="divider">
+                            <p>Dummy Title</p>
+                            <button>Dummy Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Graphic Novels</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <p>Publisher</p>
+                            <button>Show All</button>
+                            <button>DC</button>
+                            <button>Marvel</button>
+                            <button>Etc.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Games</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <p>Role Playing Games</p>
+                            <button>Show All</button>
+                            <button>Dungeons &amp; Dragons</button>
+                            <button>Pathfinder</button>
+                            <button>Etc.</button>
+                        </div>
+                        <div class="divider">
+                            <p>RPG Accessories</p>
+                            <button>Show All</button>
+                            <button>Dice</button>
+                            <button>Miniatures</button>
+                            <button>Etc.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Collectible Items</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <button>Show All</button>
+                            <button>Toys</button>
+                            <button>Action Figures</button>
+                            <button>Statues</button>
+                            <button>T-Shirts</button>
+                            <button>Trading Cards</button>
+                            <button>Etc.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button>News &amp; Events</button>
+                </div>
+                <div class="depth1">
+                    <button>Contact Us</button>
+                </div>
+            </nav>
+        </div>
+
+        <main id="details-content">
+            <section class="case1">
+                <div class="wrap">
+                    <div id="details-wrap">
+                        <button id="img-details">
+                            <img src="img/sample/0123DC053.jpg">
+                        </button>
+                        <div id="details-info">
+                            <h2><a href="javascript:;">Comics</a> > <a href="javascript:;">Pre-order</a> > <a href="javascript:;">This Week's FOC</a></h2>
+                            <h1>Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</h1>
+                            <p id="details-intro">Everyone goes insane eventually. And then they belong to the terrifying Red Mask! But Gotham City has a new savior. He strikes from the shadows, exhumes the dead, and is known only as...the Batman. And in our backup story, Tim Drake's search for Batman continues as he and Superman, Jon Kent, team up to stop the terror of the Toyman!</p>
+                            <div id="details-credits">
+                                <p>Publisher: <em>DC Comics</em></p>
+                                <p>Writer: <em>Alan Moore</em></p>
+                                <p>Artist: <em>Dave Gibbons, Gave Dibbons</em></p>
+                                <p>Cover Artist: <em>Dave Gibbons</em></p>
+                                <p>Release Date: <em>Dec 12, 2023</em></p>
+                            </div>
+                            <p id="details-price">9,400 KRW</p>
+                            <div id="details-order">
+                                <div id="details-quantity">
+                                    <button class="sub">-</button>
+                                    <input type="number" value="1">
+                                    <button class="add">+</button>
+                                </div>
+                                <button id="btn-add-item">Add to Cart</button>
+                                <button id="btn-return-list">Return to List</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap">
+                <img id="logo-box" src="img/dcc_box.png">
+                <h1>Dice and Comics Cafe (Dice Latte)</h1>
+                <ul id="shop-info">
+                    <li><em>다이스라떼(DCC카페)</em></li>           
+                    <li>서울특별시 동대문구 천호대로83길 93, 2층(장안동)</li>
+                    <li>02-960-7159</li>
+                    <li>대표: 안양주(개인정보관리책임)</li>         
+                    <li>사업자등록/통신판매업신고번호: 617-75-00029/2020-서울동대문-0595</li>
+                    <li><button>이용약관</button> &bull; <button>개인정보처리방침</button></li>
+                </ul>
+            </div>            
+        </footer>
+    </body>
+</html>

@@ -186,12 +186,15 @@ main section .list .list-item > p { display:-webkit-box; -webkit-box-orient: ver
 main section .list .list-item .img-preview { display: block; position:relative; width:100%; top:0; left:0; padding-top:100%; }
 main section .list .list-item .title { -webkit-line-clamp: 2; margin-top:1rem; font-weight: 600; line-height:1.2rem; max-height:2.4rem; }
 main section .list .list-item .desc { margin-top:0.5rem; font-size:0.8rem; -webkit-line-clamp: 4; line-height:1rem; max-height:4rem; }
+main section .list .list-item .price { margin-top:0.7rem; font-weight: 600; font-size:1rem; }
 main section .list .list-item .btnset { margin-top:1rem; display:flex; gap:0.5rem; }
 main section .list .list-item .btnset button { font-weight: 600; flex-basis: 50%; background-color: var(--main-gray); height:3rem; padding:0 1rem; color:#fff; transition:all 0.1s ease-in-out; }
 main section .paging { margin-top:2rem; display: flex; justify-content: center; gap:0.5rem; }
 main section .paging button { background-color: var(--main-gray); color:#fff; padding:0 0.6rem; height:2rem; font-size:0.8rem; opacity: 0.5; transition:all 0.1s ease-in-out; }
 main section .paging button.active { opacity: 1; }
-main section .paging button.arrow { width:1.5rem; }
+main section .paging button.arrow { width:1.5rem; background-position: center; background-size: 1rem; background-repeat: no-repeat; }
+main section .paging button.arrow.first { background-image: url(../img/icon-double-left.svg); }
+main section .paging button.arrow.last { background-image: url(../img/icon-double-right.svg); }
 
 main section .page-msg { padding:1rem; background-color:#fff; margin-bottom:2rem; }
 main section .page-msg p { font-size:1rem; line-height: 1.2; }
@@ -199,6 +202,30 @@ main section .page-msg p.info,
 main section .page-msg p.help { padding-left:1.5rem; background-size:1.2rem; background-position: left top; background-repeat: no-repeat; }
 main section .page-msg p.info { background-image: url(../img/icon-info.svg); }
 main section .page-msg p.help { background-image: url(../img/icon-help.svg); }
+
+main section #details-wrap { position: relative; font-size:0; }
+main section #details-wrap #img-details,
+main section #details-wrap #details-info { display:inline-block; vertical-align: top; }
+main section #details-wrap #img-details { width:40%; cursor: zoom-in; }
+main section #details-wrap #img-details img { width:100%; }
+main section #details-wrap #details-info { width:60%; padding-left:2rem; margin-bottom:2rem; line-height:1.5; }
+main section #details-wrap #details-info h1 { font-size:1.8rem; text-align: left; }
+main section #details-wrap #details-info h2 { font-size:1rem; margin-bottom:1rem; opacity:0.7; }
+main section #details-wrap #details-info #details-intro { font-size:1.2rem; margin-bottom:2rem; }
+main section #details-wrap #details-info #details-credits { font-size:1rem; }
+main section #details-wrap #details-info #details-credits em { font-weight: 600; }
+main section #details-wrap #details-info #details-price { font-size:1.5rem; font-weight: 600; text-align: right; margin-top:2rem; }
+main section #details-wrap #details-info #details-order { margin-top:1rem; line-height: 1; text-align: right; }
+main section #details-wrap #details-info #details-order div,
+main section #details-wrap #details-info #details-order p,
+main section #details-wrap #details-info #details-order button { display: inline-block; vertical-align: middle; }
+main section #details-wrap #details-info #details-order button { font-size:1rem; font-weight: 600; color:#fff; padding:1rem; transition:0.1s all ease-in-out; background-color: var(--main-gray); }
+main section #details-wrap #details-info #details-order button#btn-return-list { background-color: var(--main-gray-light); }
+main section #details-wrap #details-info #details-order > button { margin-left:0.5rem; }
+main section #details-wrap #details-info #details-order #details-quantity { display: inline-flex; }
+main section #details-wrap #details-info #details-order #details-quantity button { width:3rem; }
+main section #details-wrap #details-info #details-order #details-quantity input { background-color: #fff; font-size:1rem; width:4rem; text-align: center; }
+
 
 main .swiper { width:100%; height:20rem; background-color:#fff; }
 
@@ -213,10 +240,6 @@ footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: ab
 
 @media (max-width:1023px) {
 	main section .list { grid-template-columns: 1fr 1fr 1fr; }
-}
-
-@media (max-width:639px) {
-	main section .list { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width:899px) {
@@ -309,6 +332,19 @@ footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: ab
 	main section .list .list-item .btnset { margin-top:0.75rem; }
 	main section .list .list-item .btnset button { font-weight: 600; font-size:0.8rem; padding:0 0.5rem; height:2.5rem; }
 	main section .paging { margin-top:1.75rem; }
+	main section #details-wrap #img-details,
+	main section #details-wrap #details-info { display: block; width:100%; }
+	main section #details-wrap #details-info { margin-top:2rem; padding:0; }
+	main section #details-wrap #details-info h1 { font-size:1.2rem; margin-bottom:1rem; }
+	main section #details-wrap #details-info h2 { font-size:0.9rem; margin-bottom:0.5rem; }
+	main section #details-wrap #details-info #details-intro { font-size:1rem; margin-bottom:1rem; }
+	main section #details-wrap #details-info #details-price { font-size:1.4rem; margin-top:1rem; }
+	main section #details-wrap #details-info #details-order button#btn-add-item { width:calc(100% - 10.5rem); }
+	main section #details-wrap #details-info #details-order button#btn-return-list { display: block; margin:0; margin-top:1rem; width:100%; }
+}
+
+@media (max-width:639px) {
+	main section .list { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width:900px) {
@@ -322,8 +358,10 @@ footer #logo-box { display:inline-block; width:3.5rem; height:auto; position: ab
 	main section .cart li .item-control .item-quantity button { transition:0.1s all ease-in-out; }
 	main section #cart-order #cart-order-wrap #btn-cart-checkout:hover,
 	main section .cart li .item-control .item-quantity button:hover,
-	main section #summary caption:hover button { background-color: var(--main-gray-hover); }
+	main section #summary caption:hover button,
+	main section .list .list-item .btnset button:hover,
+	main section #details-wrap #details-info #details-order button:hover { background-color: var(--main-gray-hover); }
+	main section #details-wrap #details-info #details-order button#btn-return-list:hover { background-color: var(--main-gray); }
 	.span-checkbox span:hover { opacity: 0.7; }
-	main section .list .list-item .btnset button:hover { background-color: var(--main-gray-hover); }
 	main section .paging button:hover { opacity: 1; }
 }
