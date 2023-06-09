@@ -146,7 +146,7 @@
                     <div class="page-msg">
                         <p class="info">You can add bags &amp; boards / apply promo code and <b>Hero Points</b> at checkout.</p>
                     </div>
-                    <div id="cart-wrap">
+                    <div class="cart-wrap">
                         <div id="cart-list">
                             <div id="cart-control">
                                 <label class="custom-checkbox _all">
@@ -156,11 +156,11 @@
                                 <button id="btn-cart-remove-selected">Remove</button>
                                 <div id="select-cart">
                                     <label class="span-checkbox">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox" checked id="select-cart-preorder">
                                         <span>Pre-order</span>
                                     </label>
                                     <label class="span-checkbox">
-                                        <input type="checkbox">
+                                        <input type="checkbox" checked id="select-cart-instore">
                                         <span>In-store</span>
                                     </label>
                                 </div>
@@ -355,7 +355,7 @@
                                 <p>Order Total (10 Items)</p>
                                 <em id="cart-order-total">94,000 KRW</em>
                                 <p>Shipping will be calculated at checkout</p>
-                                <button id="btn-cart-checkout" onclick="window.location.href='checkout.html'">Checkout</button>
+                                <button id="btn-cart-checkout" class="btn full blue" onclick="window.location.href='checkout.html'">Checkout</button>
                                 <!-- <button id="btn-cart-checkout">Checkout</button> -->
                             </div>
                         </div>

@@ -110,7 +110,8 @@ $(document)
     .on('click', '.span-btn-delete', removeItem)
     .on('click', '#btn-cart-remove-selected', removeSelectedItems)    
     .on('click', '#btn-bnb', addBnb)
-    .on('change', 'td.bnb input', addBnbMsg);
+    .on('change', 'td.bnb input', addBnbMsg)
+    .on('change', '#select-cart input', selectCart);    
 
 function openSearchPane(){
     $('#search-wrap').addClass('_opened');
@@ -155,7 +156,7 @@ function changeQuantity(){
         $(this).siblings('input').val(currentQ+1);
     else if (currentQ > 1)
         $(this).siblings('input').val(currentQ-1);
-    else
+    else if ($(this).parent().parent().hasClass('item-control'))
         removeItem($(this).parents('li').index());
 }
 
@@ -163,7 +164,7 @@ function removeItem(idx){
     var index = ($.isNumeric(idx)) ? idx : $(this).parents('li').index();
 
     if (window.confirm('Do you want to remove this item?'))
-            $('#cart').find('li').eq(index).remove();
+            $('.cart').find('li').eq(index).remove();
 }
 
 function removeSelectedItems(){
@@ -187,4 +188,19 @@ function addBnbMsg(){
         $(this).parents('tr').addClass('bnb-added');
     else
         $(this).parents('tr').removeClass('bnb-added');
+}
+
+function selectCart(){
+    if ($(this).attr('id') == 'select-cart-preorder'){
+        if ($(this).prop('checked') == true)
+            $('.cart li.item-preorder').removeClass('hide');
+        else
+            $('.cart li.item-preorder').addClass('hide');
+    } else{
+        if ($(this).prop('checked') == true)
+            $('.cart li').not('.item-preorder').removeClass('hide');
+        else
+            $('.cart li').not('.item-preorder').addClass('hide');
+    }
+
 }
