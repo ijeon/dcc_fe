@@ -13,10 +13,6 @@
     </head>
     <body>
         <div id="dim"></div>
-        <div class="lightbox big" id="lb-image-full">
-            <img id="image-full-container" src="">
-            <button class="btn full gray cancel">Close</button>
-        </div>
 
         <header>
             <div class="wrap">
@@ -47,7 +43,6 @@
                     <button class="expand">Account Management</button>
                     <div class="depth2">
                         <div class="divider">
-                            <button>Shopping Cart</button>
                             <button>Order History</button>
                             <button>Manage Address</button>
                             <button>Account Info</button>
@@ -145,38 +140,32 @@
             </nav>
         </div>
 
-        <main id="details-content">
+        <main id="contact-content">
             <section class="case1">
                 <div class="wrap">
-                    <div id="details-wrap">
-                        <button id="img-details" class="btn-lb-open" data-lb="image-full">
-                            <img src="img/sample/0123DC053.jpg">
-                        </button>
-                        <div id="details-info">
-                            <h2><a href="javascript:;">Comics</a> > <a href="javascript:;">Pre-order</a> > <a href="javascript:;">This Week's FOC</a></h2>
-                            <h1>Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</h1>
-                            <p id="details-intro">Everyone goes insane eventually. And then they belong to the terrifying Red Mask! But Gotham City has a new savior. He strikes from the shadows, exhumes the dead, and is known only as...the Batman. And in our backup story, Tim Drake's search for Batman continues as he and Superman, Jon Kent, team up to stop the terror of the Toyman!</p>
-                            <div id="details-credits">
-                                <p>Publisher: <em>DC Comics</em></p>
-                                <p>Writer: <em>Alan Moore</em></p>
-                                <p>Artist: <em>Dave Gibbons, Gave Dibbons</em></p>
-                                <p>Cover Artist: <em>Dave Gibbons</em></p>
-                                <p>Release Date: <em>Dec 12, 2023</em></p>
-                            </div>
-                            <p id="details-price">9,400 KRW</p>
-                            <div id="details-order">
-                                <div id="details-quantity" class="item-quantity">
-                                    <button class="btn-quantity-sub">-</button>
-                                    <input class="quantity-input" type="number" value="1">
-                                    <button class="btn-quantity-add">+</button>
-                                </div>
-                                <button id="btn-add-item">Add to Cart</button>
-                                <button id="btn-return-list" onclick="window.location.href='listing.html'">Return to List</button>
-                            </div>
-                        </div>
+                    <h1 class="goback">Contact Us</h1>                    
+                    <div class="page-msg">
+                        <p class="info">Some important message.</p>
+                    </div>                    
+                    <div id="contact-wrap">
+                        <ul class="additional-info">
+                            <li class="required">
+                                <input id="" type="text" placeholder="Name">
+                            </li>
+                            <li class="required">
+                                <input id="" type="text" placeholder="Email Address">
+                            </li>
+                            <li>
+                                <input id="" type="tel" placeholder="Phone Number">
+                            </li>
+                            <li>
+                                <textarea placeholder="Message" rows="4"></textarea>
+                            </li>
+                        </ul>
                     </div>
-                </div>                
-            </section>
+                    <button class="btn full blue">Send Message</button>
+                </div>
+            </section>            
         </main>
 
         <footer>
@@ -189,7 +178,7 @@
                     <li>02-960-7159</li>
                     <li>대표: 안양주(개인정보관리책임)</li>         
                     <li>사업자등록/통신판매업신고번호: 617-75-00029/2020-서울동대문-0595</li>
-                    <li><button>이용약관</button> &bull; <button>개인정보처리방침</button></li>
+                    <li><button class="btn-lb-open" data-lb="store-policy">이용약관</button> &bull; <button class="btn-lb-open" data-lb="privacy">개인정보처리방침</button></li>
                 </ul>
             </div>            
         </footer>

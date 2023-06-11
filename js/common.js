@@ -14,7 +14,6 @@ $.fn.imgBlur = function(){
     this.find('.preview-bg').css({
         backgroundImage: 'url('+src+')'
     });
-    console.log(src);
 };
 
 function swiperInit(){    
@@ -111,7 +110,10 @@ $(document)
     .on('click', '#btn-cart-remove-selected', removeSelectedItems)    
     .on('click', '#btn-bnb', addBnb)
     .on('change', 'td.bnb input', addBnbMsg)
-    .on('change', '#select-cart input', selectCart);    
+    .on('change', '#select-cart input', selectCart)
+    .on('click', '#co-herop button', heroPoints)
+    .on('click', '#dim, .lightbox .btn.cancel', closeLightbox)
+    .on('click', '.btn-lb-open', openLightbox);
 
 function openSearchPane(){
     $('#search-wrap').addClass('_opened');
@@ -150,12 +152,12 @@ function checkSelectAll(){
 }
 
 function changeQuantity(){
-    var currentQ = parseInt($(this).siblings('input').val());
+    var currentQ = parseInt($(this).siblings('.quantity-input').val());
 
     if ($(this).hasClass('btn-quantity-add'))
-        $(this).siblings('input').val(currentQ+1);
+        $(this).siblings('.quantity-input').val(currentQ+1);
     else if (currentQ > 1)
-        $(this).siblings('input').val(currentQ-1);
+        $(this).siblings('.quantity-input').val(currentQ-1);
     else if ($(this).parent().parent().hasClass('item-control'))
         removeItem($(this).parents('li').index());
 }
@@ -177,7 +179,7 @@ function removeSelectedItems(){
 }
 
 function addBnb(){
-    $('#summary td.bnb').each(function(){
+    $('.summary td.bnb').each(function(){
         $(this).find('input').prop('checked', true);
         $(this).parent().addClass('bnb-added');
     });
@@ -203,4 +205,41 @@ function selectCart(){
             $('.cart li').not('.item-preorder').addClass('hide');
     }
 
+}
+
+function heroPoints(){
+    var currentP = $(this).parent().data('pt');
+    var usingP = $(this).siblings('#co-herop-use').data('pt');
+
+    if ($(this).hasClass('btn-point-add') && usingP+10000 <= currentP)
+        usingP+=10000;
+    else if (!$(this).hasClass('btn-point-add') && usingP-10000 >= 0)
+        usingP-=10000;
+
+    $(this).siblings('#co-herop-use').data('pt', usingP);
+    $(this).siblings('#co-herop-use').text(numberWithCommas(usingP));
+}
+
+function numberWithCommas(x){
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function openLightbox(){
+    var id = $(this).data('lb');
+
+    if (id == 'image-full'){
+        var src = $(this).find('img').attr('src');
+        $('#image-full-container').attr('src', src);
+    }
+
+    $('body').addClass('lb-opened');
+    $('#lb-'+ id).addClass('active');
+
+}
+
+function closeLightbox(){
+    $('body').removeClass('lb-opened');
+    $('.lightbox.active').find('input').val('');
+    $('#image-full-container').attr('src', '').scrollTop(0);
+    $('.lightbox.active').removeClass('active');
 }

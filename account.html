@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dice and Comics Cafe">
+        <title>Dice and Comics Cafe</title>
+        <link rel="stylesheet" href="css/swiper-bundle.css">
+        <link rel="stylesheet" href="css/common.css">       
+        <script defer src="js/jquery-3.7.0.min.js"></script>
+        <script defer src="js/swiper-bundle.min.js"></script>
+        <script defer src="js/common.js"></script>
+    </head>
+    <body>
+        <div id="dim"></div>
+        <div class="lightbox mid" id="lb-order-detail">
+            <h1>Order Detail</h1>
+            <table class="summary">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Bag & Board</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bnb-added item-preorder">
+                        <td class="item-info">
+                            <div class="img-preview">
+                                <span class="preview-bg"></span>
+                                <img src="img/sample/0123DC053.jpg">
+                            </div>
+                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
+                        </td>
+                        <td>111</td>
+                        <td>119,400 KRW <em class="bnb">+200 KRW</em></td>
+                        <td class="bnb">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" checked>
+                                <span class="custom-checkbox-mark"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-info">
+                            <div class="img-preview">
+                                <span class="preview-bg"></span>
+                                <img src="img/sample/0123DC053.jpg">
+                            </div>
+                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
+                        </td>
+                        <td>111</td>
+                        <td>119,400 KRW <em class="bnb">+200 KRW</em></td>
+                        <td class="bnb">
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-mark"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-info">
+                            <div class="img-preview">
+                                <span class="preview-bg"></span>
+                                <img src="img/sample/0123DC053.jpg">
+                            </div>
+                            <a href="javascript:;" class="title">Batman #133 Cover C Stanley Artgerm Lau Card Stock Variant (2016)</a>
+                        </td>
+                        <td>111</td>
+                        <td>119,400 KRW <em class="bnb">+200 KRW</em></td>
+                        <td class="bnb">
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="custom-checkbox-mark"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-info">
+                            <div class="img-preview">
+                                <span class="preview-bg"></span>
+                                <img src="img/sample/0123DC053.jpg">
+                            </div>
+                            <a href="javascript:;" class="title">Not a book</a>
+                        </td>
+                        <td>111</td>
+                        <td>119,400 KRW</td>
+                        <td class="bnb">
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="order-summary-detail responsive-flex-wrap">
+                <div>
+                    <p>Ship to: 집</p>
+                    <div class="full-address">
+                        <p class="bold mb5">Joey Croner</p>
+                        <p class="mb5">서울시 강동구 다이스라떼 아파트 103동 903호 긴 주소 긴 주소 긴 주소 긴 주소 긴 주소 긴 주소 (05300)</p>
+                        <p>010-0000-0000</p>
+                    </div>
+                    <p>Email: joeycroner@dcc.com</p>
+                    <p>Shipping Method: 택배</p>
+                    <p>Payment Method: 카드</p>
+                    <p>Order Request: 배송완료시 전화주세요</p>
+                </div>
+                <div>
+                    <ul class="order-detail-total">
+                        <li>
+                            <span class="type">4 Items</span>
+                            <span class="price">42,000 KRW</span>
+                        </li>
+                        <li>
+                            <span class="type">Shipping</span>
+                            <span class="price">4,000 KRW</span>
+                        </li>
+                        <li class="total-sub">
+                            <span class="type">Hero Points</span>
+                            <span class="price">-1,000</span>
+                        </li>
+                        <li class="total-sub">
+                            <span class="type">Promo Code</span>
+                            <span class="price">-3,000</span>
+                        </li>
+                    </ul>
+                    <p class="order-detail-total-pay">42,000 KRW</p>
+                </div>
+            </div>
+            <button class="btn full gray cancel">Close</button>
+        </div>        
+        <div class="lightbox small" id="lb-add-address">
+            <h1>Add New Adress</h1>
+            <ul class="additional-info">
+                <li class="required">
+                    <input id="" type="text" placeholder="Name">
+                </li>
+                <li class="required">
+                    <input id="" type="text" placeholder="Post Code" disabled>
+                    <button id="btn-apply-promo" class="btn tan">Search</button>
+                </li>
+                <li class="required">
+                    <input id="" type="text" placeholder="Address 1" disabled>
+                </li>
+                <li>
+                    <input id="" type="text" placeholder="Address 2 (Optional)">
+                </li>
+                <li class="required">
+                    <input id="" type="tel" placeholder="Phone Number">
+                </li>
+                <li>
+                    <input id="" type="text" placeholder="Save As..">
+                </li>
+            </ul>
+            <button class="btn full blue">Save This Address</button>
+            <button class="btn full gray cancel">Cancel</button>
+        </div>
+        <header>
+            <div class="wrap">
+                <div id="search-wrap">
+                    <input id="search-input" type="text">
+                    <button id="btn-search"></button>
+                </div>
+                <button id="btn-search-open">Search Dice and Comics Cafe</button>
+                <button id="logo" onclick="window.location.href='main.html'"></button>
+                <!-- <button id="logo" onclick="window.location.href='/'"></button> -->
+                <nav id="gnb">
+                    <button id="btn-lang">ENG</button>
+                    <button id="btn-account" onclick="window.location.href='account.html'"></button>
+                    <button id="btn-cart" onclick="window.location.href='cart.html'"><span id="item-count">10</span></button>
+                    <!-- <button id="btn-cart"><span id="item-count">10</span></button> -->
+                    <button id="btn-menu"></button>
+                </nav>
+            </div>            
+        </header>
+        <div id="menubar">
+            <nav id="lnb">
+                <div id="settings" class="mobile-only">
+                    <h1>Hello, <em>Joey</em>!</h1> <!-- nickname -->
+                    <p>Hero Points: <em>10,000</em></p>
+                    <button id="btn-lnb-lang">ENG</button>
+                </div>
+                <div class="depth1 mobile-only _opened">
+                    <button class="expand">Account Management</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <button>Order History</button>
+                            <button>Manage Address</button>
+                            <button>Account Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Comics</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <p>Pre-order</p>
+                            <button onclick="window.location.href='listing.html'">This Week's FOC</button>
+                            <!-- <button>This Week's FOC</button> -->
+                            <button>March Catalog</button>
+                            <button>April Catalog</button>
+                            <button>May Catalog</button>
+                            <button>June Catalog</button>
+                        </div>
+                        <div class="divider">
+                            <p>Inventory</p>
+                            <button>Show All</button>
+                            <button>DC</button>
+                            <button>Marvel</button>
+                            <button>Etc.</button>
+                        </div>
+                        <div class="divider">
+                            <p>Special</p>
+                            <button>Incentive Variants</button>
+                            <button>Signed Comics</button>
+                            <button>Graded Comics</button>
+                            <button>DCC Exclusive</button>
+                        </div>
+                        <div class="divider">
+                            <p>Dummy Title</p>
+                            <button>Dummy Item</button>
+                            <button>Dummy Item</button>
+                        </div>
+                        <div class="divider">
+                            <p>Dummy Title</p>
+                            <button>Dummy Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Graphic Novels</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <p>Publisher</p>
+                            <button>Show All</button>
+                            <button>DC</button>
+                            <button>Marvel</button>
+                            <button>Etc.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Games</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <p>Role Playing Games</p>
+                            <button>Show All</button>
+                            <button>Dungeons &amp; Dragons</button>
+                            <button>Pathfinder</button>
+                            <button>Etc.</button>
+                        </div>
+                        <div class="divider">
+                            <p>RPG Accessories</p>
+                            <button>Show All</button>
+                            <button>Dice</button>
+                            <button>Miniatures</button>
+                            <button>Etc.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button class="expand">Collectible Items</button>
+                    <div class="depth2">
+                        <div class="divider">
+                            <button>Show All</button>
+                            <button>Toys</button>
+                            <button>Action Figures</button>
+                            <button>Statues</button>
+                            <button>T-Shirts</button>
+                            <button>Trading Cards</button>
+                            <button>Etc.</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="depth1">
+                    <button>News &amp; Events</button>
+                </div>
+                <div class="depth1">
+                    <button onclick="window.location.href='contact.html'">Contact Us</button>
+                </div>
+            </nav>
+        </div>
+
+        <main id="account-content">
+            <section class="case1">
+                <div class="wrap">
+                    <h1 class="goback">Account Management</h1>                    
+                    <div class="page-msg">
+                        <p class="info">Some important message.</p>
+                    </div>
+                    <div class="responsive-flex-wrap col3">
+                        <div>
+                            <h2>Order History</h2>
+                            <table class="history">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Total</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <button class="btn order-no btn-lb-open" data-lb="order-detail">#39233</button>
+                                        </td>
+                                        <td>24,000 KRW</td>
+                                        <td>23.02.17</td>
+                                        <td>Pending</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>
+                                            <button class="btn order-no btn-lb-open" data-lb="order-detail">#39232</button>
+                                        </td>
+                                        <td>24,000 KRW</td>
+                                        <td>23.02.17</td>
+                                        <td>Shipped</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="paging">
+                                <button class="arrow first"></button>
+                                <button class="active">1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                                <button>5</button>
+                                <button class="arrow last"></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Manage Address</h2>
+                            <div class="address-list-wrap">
+                                <ul class="address-list">
+                                    <li>
+                                        <button class="btn edit"></button>
+                                        <h3>집</h3>
+                                        <div class="full-address">
+                                            <p class="bold">Joey Croner</p>
+                                            <p>서울시 강동구 다이스라떼 아파트 103동 903호 긴 주소 긴 주소 긴 주소 긴 주소 긴 주소 긴 주소 (05300)</p>
+                                            <p>010-0000-0000</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button class="btn edit"></button>
+                                        <h3>회사</h3>
+                                        <div class="full-address">
+                                            <p class="bold">Ellie</p>
+                                            <p>서울특별시 동대문구 천호대로83길 93, 2층(장안동)</p>
+                                            <p>02-960-7159</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="btn gray full btn-lb-open" data-lb="add-address">+ Add New Address</button>                                
+                            </div>                            
+                        </div>
+                        <div>
+                            <h2>Account Info</h2>
+                            <div id="acc-info">
+                                <button class="btn edit"></button>
+                                <p class="bold mb5">Joey Croner</p>
+                                <p>Email: joeycroner@dcc.com</p>
+                                <p class="mb5">Phone: 010-0000-0000</p>
+                                <p>Hero Points: 10,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>            
+        </main>
+
+        <footer>
+            <div class="wrap">
+                <img id="logo-box" src="img/dcc_box.png">
+                <h1>Dice and Comics Cafe (Dice Latte)</h1>
+                <ul id="shop-info">
+                    <li><em>다이스라떼(DCC카페)</em></li>           
+                    <li>서울특별시 동대문구 천호대로83길 93, 2층(장안동)</li>
+                    <li>02-960-7159</li>
+                    <li>대표: 안양주(개인정보관리책임)</li>         
+                    <li>사업자등록/통신판매업신고번호: 617-75-00029/2020-서울동대문-0595</li>
+                    <li><button>이용약관</button> &bull; <button>개인정보처리방침</button></li>
+                </ul>
+            </div>            
+        </footer>
+    </body>
+</html>

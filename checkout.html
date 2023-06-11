@@ -13,6 +13,33 @@
     </head>
     <body>
         <div id="dim"></div>
+        <div class="lightbox small" id="lb-add-address">
+            <h1>Add New Adress</h1>
+            <ul class="additional-info">
+                <li class="required">
+                    <input id="" type="text" placeholder="Name">
+                </li>
+                <li class="required">
+                    <input id="" type="text" placeholder="Post Code" disabled>
+                    <button id="btn-apply-promo" class="btn tan">Search</button>
+                </li>
+                <li class="required">
+                    <input id="" type="text" placeholder="Address 1" disabled>
+                </li>
+                <li>
+                    <input id="" type="text" placeholder="Address 2 (Optional)">
+                </li>
+                <li class="required">
+                    <input id="" type="tel" placeholder="Phone Number">
+                </li>
+                <li>
+                    <input id="" type="text" placeholder="Save As..">
+                </li>
+            </ul>
+            <button class="btn full blue">Save This Address</button>
+            <button class="btn full gray cancel">Cancel</button>
+        </div>
+
         <header>
             <div class="wrap">
                 <div id="search-wrap">
@@ -24,7 +51,7 @@
                 <!-- <button id="logo" onclick="window.location.href='/'"></button> -->
                 <nav id="gnb">
                     <button id="btn-lang">ENG</button>
-                    <button id="btn-account"></button>
+                    <button id="btn-account" onclick="window.location.href='account.html'"></button>
                     <button id="btn-cart" onclick="window.location.href='cart.html'"><span id="item-count">10</span></button>
                     <!-- <button id="btn-cart"><span id="item-count">10</span></button> -->
                     <button id="btn-menu"></button>
@@ -134,7 +161,7 @@
                     <button>News &amp; Events</button>
                 </div>
                 <div class="depth1">
-                    <button>Contact Us</button>
+                    <button onclick="window.location.href='contact.html'">Contact Us</button>
                 </div>
             </nav>
         </div>
@@ -150,7 +177,7 @@
                     <div class="cart-wrap">
                         <div id="checkout-info">
                             <h2>Order Summary</h2>
-                            <table id="summary">
+                            <table class="summary">
                                 <caption>
                                     <button id="btn-bnb">+ Bags &amp; Boards</button>
                                     <button id="btn-bnb-help"></button>
@@ -237,21 +264,138 @@
                                     </tr>
                                 </tbody>
                             </table>
-        
-                            <h2>Shipping Address</h2>
-                            <!-- <div id="checkout-address">
-                                <input type="radio">
-                            </div> -->
-        
-                            <h2>Shipping Method</h2>
                             
-                            <h2>Payment Method</h2>
-        
-                            <h2>Order Total</h2>
+                            <div class="responsive-flex-wrap">
+                                <div>
+                                    <h2>Shipping Address</h2>
+                                    <div id="checkout-address">
+                                        <div class="address-list-wrap">
+                                            <ul class="address-list">
+                                                <li>
+                                                    <label class="custom-radio">
+                                                        <input type="radio" name="co-address" checked>
+                                                        <span class="custom-radio-mark"></span>
+                                                        <span class="custom-radio-label">집</span>
+                                                    </label>
+                                                    <div class="full-address">
+                                                        <p class="bold">Joey Croner</p>
+                                                        <p>서울시 강동구 다이스라떼 아파트 103동 903호 긴 주소 긴 주소 긴 주소 긴 주소 긴 주소 긴 주소 (05300)</p>
+                                                        <p>010-0000-0000</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <label class="custom-radio">
+                                                        <input type="radio" name="co-address">
+                                                        <span class="custom-radio-mark"></span>
+                                                        <span class="custom-radio-label">회사</span>
+                                                    </label>
+                                                    <div class="full-address">
+                                                        <p class="bold">Ellie</p>
+                                                        <p>서울특별시 동대문구 천호대로83길 93, 2층(장안동)</p>
+                                                        <p>02-960-7159</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <button class="btn gray full btn-lb-open" data-lb="add-address">+ Add New Address</button>
+                                            <ul class="additional-info">
+                                                <li>
+                                                    <input id="" type="text" placeholder="Email Address" value="member@dcc.com">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>Shipping Method</h2>
+                                    <div id="shipping-method-wrap">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="co-shipping" checked>
+                                            <span class="custom-radio-mark"></span>
+                                            <span class="custom-radio-label">택배</span>
+                                        </label>
+                                        <ul class="co-msg bgtype">
+                                            <li>배송업체: CJ대한통운</li>
+                                            <li>배송지역: 대한민국 전지역</li>
+                                            <li>배송비용: 4,000원 (제주도/도서산간지역 별도 추가금액 발생)</li>
+                                            <li>배송기간: 주말/공휴일 제외 3-7일</li>
+                                        </ul>
+                                        <br>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="co-shipping">
+                                            <span class="custom-radio-mark"></span>
+                                            <span class="custom-radio-label">픽업</span>
+                                        </label>
+                                        <ul class="co-msg">
+                                            <li>주문 폭주 및 공금 사정으로 인하여 지연 및 품절이 발생될 수 있습니다.</li>
+                                            <li>기본 배송기간 이상 소요되는 상품이거나, 품절 상품은 개별 연락을 드립니다.</li>
+                                        </ul>
+                                        <ul class="additional-info">
+                                            <li>
+                                                <input id="" type="text" placeholder="Personal Customs Code">
+                                            </li>
+                                            <li>
+                                                <input id="" type="text" placeholder="Order Request">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="responsive-flex-wrap">
+                                <div>
+                                    <h2>Payment Method</h2>
+                                    <div id="payment-method-wrap">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="co-payment" checked>
+                                            <span class="custom-radio-mark"></span>
+                                            <span class="custom-radio-label">무통장입금</span>
+                                        </label>
+                                        <br>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="co-payment">
+                                            <span class="custom-radio-mark"></span>
+                                            <span class="custom-radio-label">카드</span>
+                                        </label>
+                                        <br>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="co-payment">
+                                            <span class="custom-radio-mark"></span>
+                                            <span class="custom-radio-label">간편결제</span>
+                                        </label>
+                                        <ul class="co-msg">
+                                            <li>무통장입금 선택 시 주문이 확인 및 처리될 때까지 결제를 요청하지 않습니다.</li>
+                                            <li>결제 요청 이메일을 받으려면 주문 후 24~48시간이 소요됩니다.</li>
+                                        </ul>
+                                        <div id="redeem-wrap">
+                                            <h3>Hero Points<button class="btn-help"></button></h3>
+                                            <div class="co-herop-wrap">
+                                                <div id="co-herop" data-pt="34000">
+                                                    <button class="btn-point-sub btn gray">-</button>
+                                                    <p id="co-herop-use" data-pt="0">0</p>
+                                                    <button class="btn-point-add btn gray">+</button>
+                                                </div>
+                                                <p>/ 34,000</p>
+                                            </div>
+                                            <ul class="additional-info">
+                                                <li>
+                                                    <input id="" type="text" placeholder="Enter Promotion Code">
+                                                    <button id="btn-apply-promo" class="btn tan">Apply</button>
+                                                </li>
+                                            </ul>
+                                            <p class="input-msg succeed">Promotion code applied.</p>
+                                            <p class="input-msg failed">Expired or wrong code.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>(Promotional Area)</p>
+                                </div>
+                            </div>
                         </div>
                         <div id="checkout-total">
+                            <h2>Order Total</h2>
                             <div id="checkout-total-wrap">
-                                <h2>Order Total</h2>
                                 <ul id="checkout-total-details">
                                     <li>
                                         <span class="type">4 Items</span>
@@ -259,7 +403,7 @@
                                     </li>
                                     <li>
                                         <span class="type">Shipping</span>
-                                        <span class="price">3,000 KRW</span>
+                                        <span class="price">4,000 KRW</span>
                                     </li>
                                     <li class="total-sub">
                                         <span class="type">Hero Points</span>
@@ -267,18 +411,30 @@
                                     </li>
                                     <li class="total-sub">
                                         <span class="type">Promo Code</span>
-                                        <span class="price">-2,000</span>
+                                        <span class="price">-3,000</span>
                                     </li>
                                 </ul>
-                                <p id="checkout-pay-total">42,000 KRW</p>
-                                <p id="checkout-msg">Important checkout message here. Blah Blah</p>
-                                <label class="custom-checkbox">
+                                <p id="checkout-pay-total">42,000 KRW</p>                                
+                                <div class="co-notice">
+                                    <h3>교환 및 반품 안내</h3>
+                                    <ul class="co-msg bgtype">
+                                        <li>신청 방법: info@diceandcomics.com으로 주문번호와 환불/반품 사유를 기재하여 메일을 보내주세요.</li>
+                                        <li>배송비: 4,000원</li>
+                                        <li>반품 주소: 서울특별시 동대문구 천호대로83길 93 2층 (장안동)</li>
+                                    </ul>
+                                    <p>** 상품의 특성상 배송 후 교환 및 환불은 일절 불가하니 참고 부탁드립니다. (단순 변심, 부주의에 의한 제품 손상 및 파손, 사용 및 개봉한 경우 포함)
+                                        <br>단, 상품의 파손이나 오배송의 경우 배송 완료일로부터 7일 이내 교환/반품이 가능합니다. 상품이 파손되어 배송되었을 경우, 배송 받은 즉시 파손 부위가 잘 보이게 사진을 찍어서 info@diceandcomics.com로 보내주십시요. 개별적으로 확인하여 반품 가능 여부를 안내해 드리겠습니다.
+                                        <br>DCC 카페는 코믹스를 최소 "니어 민트" (Near Mint, 거의 완벽한) 상태로 제공하기 위해 최선을 다하고 있지만, 미국에서 재고를 확보해 오는 과정에서 약간의 손상이 있을 수도 있다는 점을 양해 바라며, 어떤 코믹스 판매점도 배송시 완벽한 상태의 코믹스를 보증하진 않습니다.
+                                        <br>(참고로, DCC카페는 특수 패킹포장으로 오픈시점부터 현재까지 배송시 파손 접수된 경우가 단 한건도 없었음을 알려 드립니다!)
+                                    </p>
+                                </div>
+                                <label id="co-agree" class="custom-checkbox">
                                     <input type="checkbox">
                                     <span class="custom-checkbox-mark"></span>
-                                    <span class="custom-checkbox-label">I agree to terms</span>
+                                    <span class="custom-checkbox-label">구매조건에 동의합니다.</span>
                                 </label>
                                 <button id="btn-checkout-confirm" class="btn full blue">Confirm &amp; Pay</button>
-                            </div>                            
+                            </div>
                         </div>
                     </div>                    
                 </div>
